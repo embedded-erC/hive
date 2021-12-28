@@ -1,0 +1,18 @@
+[Board Display]
+show hex grid = no
+
+[Expansions]
+ladybug = no
+mosquito = no
+mealworm = no
+
+[Gameplay]
+time limit per game = 0
+time limit per move = 0
+time increment per move = 0
+sandbox mode = no
+
+[Stats]
+record stats = no
+
+

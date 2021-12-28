@@ -1,0 +1,58 @@
+[Queens]
+Open hexes around queen = 0.5
+Slidable hexes around queen penalty = 0.1
+
+[Pieces in Play]
+Queen in play = 0.75
+Ant in play = 0.4
+Beetle in play = 0.35
+Spider in play = 0.2
+Grasshopper in play = 0.2
+
+[Movement]
+Total moves scalar = 0.02
+Queen moves scalar = 0.15
+Queen adjacent friendly moves scalar = 0.075
+
+[Placements]
+Enemy queen adjacent bonus = 0.25
+Total placements scalar = 0.075
+
+[Enemy Capture]
+Queen capture bonus = 1
+Spider capture bonus = 1
+Grasshopper capture bonus = 1
+Ant capture bonus = 1
+Beetle capture bonus = 1
+Direct locking bonus = 1
+Elbow locking bonus = 1
+
+[Beetles]
+Beetle on top of enemy queen = 0.8
+Beetle on top of enemy ant = 0.3
+Beetle on top of enemy spider = 0.1
+Beetle on top of enemy beetle = 0.25
+Beetle on top of enemy grasshopper = 0.15
+Beetle on top of friendly queen = 0.2
+Beetle on top of friendly ant = 0.2
+Beetle on top of friendly spider = 0.05
+Beetle on top of friendly beetle = 0.5
+Beetle on top of friendly grasshopper = 0.07
+
+[Queen Adjustments]
+Beetle locking enemy queen = 1
+Beetle adjacent to enemy queen = 1
+Ant locking enemy queen = 1
+Ant adjacent to enemy queen = 1
+Spider locking enemy queen = 1
+Spider adjacent to enemy queen = 1
+Grasshopper locking enemy queen = 1
+Grasshopper adjacent to enemy queen = 1
+
+Grasshopper adjacent to friendly queen = 1
+Beetle distance to enemy queen scalar = 1
+
+[Misc]
+Piece surrounded penalty = 1
+Turn advantage = 0.4
+
