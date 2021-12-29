@@ -102,3 +102,6 @@ ENV/
 
 # Jetbrains
 .idea/
+
+# Locally saved games
+saved_games/

@@ -3,6 +3,7 @@ import pytest
 from src.game.model import HiveGame
 from src.game.consts import Consts
 from src.GUI.gui_functions import GuiFunctions
+from src.records.hive_recorder import HiveRecorder
 import src.game.pieces as pieces
 
 
@@ -101,3 +102,10 @@ def edge_queen():
     queen = pieces.Queen(Consts.kBlack)
     queen.location = (0, 2)
     return queen
+
+
+@pytest.fixture
+def empty_saved_game():
+    game_record = HiveRecorder()
+    game_record.start_recording({'test_key': 'test_value'}, 'pytest', 'unittest', time_control='10+10')
+    return game_record
