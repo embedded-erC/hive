@@ -38,3 +38,13 @@ def test_log_move(empty_saved_game):
     # moves are logged as a tuple of (board_state_info, move_time_seconds)
     assert board_state == null_move
     assert 0.02 <= move_time_seconds <= 0.04
+
+
+def test_log_result(empty_saved_game):
+    faux_result = 'Black Resigns'
+    empty_saved_game.log_result(faux_result)
+    assert empty_saved_game.game_data['game information']['Result'] == faux_result
+
+
+def test_save_game(empty_saved_game):
+    assert empty_saved_game.save_game_to_file() is False
