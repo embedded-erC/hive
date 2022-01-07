@@ -237,7 +237,6 @@ class HiveGUI:
 
 
 if __name__ == '__main__':
-
     game = HiveGUI()
     game.manager.game_manager.execute_turn({
         'place piece': {'color': 'black', 'location': (0, 0), 'type': 'queen'}
@@ -246,13 +245,13 @@ if __name__ == '__main__':
         'place piece': {'color': 'white', 'location': (0, 2), 'type': 'queen'}
     })
     game.manager.game_manager.execute_turn({
-        'place piece': {'color': 'black', 'location': (-1, -1), 'type': 'beetle'}
+        'place piece': {'color': 'black', 'location': (1, -1), 'type': 'spider'}
     })
     game.manager.game_manager.execute_turn({
-        'place piece': {'color': 'white', 'location': (1, 3), 'type': 'ant'}
+        'place piece': {'color': 'white', 'location': (-1, 3), 'type': 'ant'}
     })
     game.manager.game_manager.execute_turn({
-        'place piece': {'color': 'black', 'location': (1, -1), 'type': 'ant'}
+        'place piece': {'color': 'black', 'location': (-1, -1), 'type': 'ant'}
     })
     game.manager.game_manager.execute_turn({
         'place piece': {'color': 'white', 'location': (-1, 5), 'type': 'beetle'}
@@ -260,9 +259,9 @@ if __name__ == '__main__':
     game.manager.game_manager.execute_turn({
         'place piece': {'color': 'black', 'location': (0, -2), 'type': 'grasshopper'}
     })
-    # game.manager.game_manager.execute_turn({
-    #     'place piece': {'color': 'white', 'location': (0, 4), 'type': 'grasshopper'}
-    # })
+    game.manager.game_manager.execute_turn({
+        'place piece': {'color': 'white', 'location': (0, 4), 'type': 'grasshopper'}
+    })
     # game.manager.game_manager.execute_turn({
     #     'place piece': {'color': 'black', 'location': (2, 0), 'type': 'spider'}
     # })
