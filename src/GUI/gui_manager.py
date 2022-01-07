@@ -63,7 +63,7 @@ class GuiManager:
     board_evaluation: float
 
     def __init__(self):
-        self.game_manager = HiveGameManager()
+        self.game_manager = HiveGameManager("live_game_config")
         self.game_state = self.kStart_turn  # self.kInitializing
         self.user_hex_location = []
         self.engine = Engine()
@@ -129,7 +129,7 @@ class GuiManager:
         self.board_state = json.loads(self.game_manager.get_game_state())
         self.pieces = [GuiPiece(piece_info) for piece_info in self.board_state['pieces']]
 
-        if self.board_state['player turn'] == 'black' and not self.winner and self.board_state['black turns'] > 3:
+        if self.board_state['player turn'] == 'black' and not self.winner and self.board_state['black turns'] > 30:
             self.engine.reset(self.board_state, 5)
             engine_move = self.engine.choose_move()
             self.board_evaluation = self.engine.best_evaluation
@@ -177,7 +177,7 @@ class GuiManager:
                 self.transition_to_state(self.kStart_turn)
 
     def handle_reset_button(self) -> None:
-        self.game_manager.execute_turn({'reset': None})
+        self.game_manager.execute_turn({'reset': {}})
         self.transition_to_state(self.kStart_turn)
 
     def handle_cancel_button(self) -> None:

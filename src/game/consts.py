@@ -48,6 +48,11 @@ def get_config(_config_name=''):
         # Stats
         config_dict['kIs_recording_stats'] = config['Stats'].getboolean('record stats')
 
+        # Player info for game records
+        config_dict['kIs_recording_game'] = config['Recording'].getboolean('record game')
+        config_dict['kPlayer_1'] = config['Recording']['player 1']
+        config_dict['kPlayer_2'] = config['Recording']['player 2']
+
     except (ValueError, KeyError) as err:
         print("Invalid Parameters! Check your Hive config settings. Aborting.")
         quit(err)

@@ -92,8 +92,8 @@ class HiveGameManager:
             self.game_model.move_piece(from_hex, to_hex)
         elif 'reset' in turn:
             self.game_model.reset_game()
-            if 'save_game' in turn['reset'] and turn['reset']['save_game']:
-                self.recorder.start_recording(self.get_raw_game_state(), turn['reset']['player 1'], turn['reset']['player 2'])
+            if self.config['kIs_recording_game']:
+                self.recorder.start_recording(self.get_raw_game_state(), self.config['kPlayer_1'], self.config['kPlayer_2'])
 
     def set_board_state(self, board_state: dict) -> None:
         """ Tell the game model to load a new board state. board_state is what is packaged by get_raw_game_state() """
